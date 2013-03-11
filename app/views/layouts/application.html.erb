@@ -3,11 +3,13 @@
   <title>Calendar</title>  
   <%= stylesheet_link_tag "fullcalendar.css" %>
   <%= stylesheet_link_tag "application.css" %>
+  <%= stylesheet_link_tag "bootstrap-responsive.css" %>
+  <%= stylesheet_link_tag "bootstrap.css" %>  
   <%= javascript_include_tag "jquery.js" %>
   <%= javascript_include_tag "jquery.rest.js" %>
   <%= javascript_include_tag "rails.js" %>
   <%= javascript_include_tag "application.js" %>
-  
+
   <!-- these are needed for the calendar. -->
   <%= javascript_include_tag "jquery-ui-1.8.11.custom.min.js" %>
   <%= javascript_include_tag "fullcalendar.js" %>
@@ -19,8 +21,25 @@
   
 </head>
 <body>
+  <div class='container'>
+    <div class="navbar" style='height:40px; margin-bottom:0px; border-radius: 30px 30px 30px 30px;'>
+      <div class="navbar-inner">
+        <a href="/" title="Weekly Calendar Template" class="brand">Calendar</a>
+          <ul class="nav">
+            <li>
+              <%= link_to 'Support', '#' %>
+            </li>
+            <li>
+              <%= link_to 'About Us', '#' %>
+            </li>
+            <li>
+              <%= link_to 'Contact Us', '#' %>
+            </li>
+          </ul>
+      </div>
+    </div>
 
-<%= yield %>
-
+  <%= yield %>
+  </div>
 </body>
 </html>
